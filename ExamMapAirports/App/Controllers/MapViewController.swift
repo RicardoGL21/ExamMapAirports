@@ -36,13 +36,10 @@ class MapViewController:UIViewController {
     }
     
     func makeAnnotation(latitude:Double,longitude:Double,name:String){
-        //We make this part in the thread main because we update the UI and UIKit isn't thread-safe and we don't want inconsistencies updating the UI
-        DispatchQueue.main.async {
             let annotation = MKPointAnnotation()
             annotation.title = name
             annotation.coordinate = CLLocationCoordinate2DMake(CLLocationDegrees(latitude), CLLocationDegrees(longitude))
             self.mapView.addAnnotation(annotation)
-        }
     }
     
 }
