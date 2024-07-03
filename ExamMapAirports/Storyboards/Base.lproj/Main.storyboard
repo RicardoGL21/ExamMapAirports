@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="15B-oG-3X6">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Inicio-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ExamMapAirports" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMn-Ee-Hmk">
+                                <rect key="frame" x="10" y="203" width="373" height="59"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="AIRPORT">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="systemBold" size="53"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njf-DO-Bk7">
+                                <rect key="frame" x="10" y="262" width="373" height="31.333333333333314"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="finder">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="systemBold" size="28"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMi-u4-rFw">
+                                <rect key="frame" x="10" y="373.33333333333331" width="373" height="62.333333333333314"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="60">
+                                        <attributes>
+                                            <color key="NSColor" red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="systemBold" size="56"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="56"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minValue="0.5" maxValue="120" translatesAutoresizingMaskIntoConstraints="NO" id="t8u-q5-myG">
+                                <rect key="frame" x="18" y="450.66666666666669" width="357" height="31"/>
+                                <color key="tintColor" systemColor="systemMintColor"/>
+                                <connections>
+                                    <action selector="sliderChangeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="oBY-Nx-6Cy"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLO-xW-Wmj">
+                                <rect key="frame" x="126.66666666666669" y="556" width="140" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="ncl-Bl-bCt"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemMintColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Buscar" cornerStyle="capsule"/>
+                                <connections>
+                                    <segue destination="jbE-ol-blT" kind="show" identifier="searchAirports" id="YwP-Xr-FdS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radio de busqueda" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g51-Ej-RE6">
+                                <rect key="frame" x="10" y="495.66666666666669" width="373" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <constraints>
+                            <constraint firstItem="KLO-xW-Wmj" firstAttribute="top" secondItem="g51-Ej-RE6" secondAttribute="bottom" constant="40" id="1GZ-dm-acu"/>
+                            <constraint firstItem="yMi-u4-rFw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="2BB-CK-NwY"/>
+                            <constraint firstItem="t8u-q5-myG" firstAttribute="top" secondItem="yMi-u4-rFw" secondAttribute="bottom" constant="15" id="D1S-BN-Pdv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g51-Ej-RE6" secondAttribute="trailing" constant="10" id="KNk-u4-G1s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t8u-q5-myG" secondAttribute="trailing" constant="20" id="Nwg-qG-9qB"/>
+                            <constraint firstItem="Njf-DO-Bk7" firstAttribute="top" secondItem="xMn-Ee-Hmk" secondAttribute="bottom" id="Sd2-bi-QcB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yMi-u4-rFw" secondAttribute="trailing" constant="10" id="TZf-oS-BFm"/>
+                            <constraint firstItem="g51-Ej-RE6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="XG6-dL-2gS"/>
+                            <constraint firstItem="Njf-DO-Bk7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="aaG-z2-I8s"/>
+                            <constraint firstItem="t8u-q5-myG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cXl-pe-sIo"/>
+                            <constraint firstItem="g51-Ej-RE6" firstAttribute="top" secondItem="t8u-q5-myG" secondAttribute="bottom" constant="15" id="u72-7O-WfT"/>
+                            <constraint firstItem="yMi-u4-rFw" firstAttribute="top" secondItem="Njf-DO-Bk7" secondAttribute="bottom" constant="80" id="urA-rM-6Lj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Njf-DO-Bk7" secondAttribute="trailing" constant="10" id="vMN-X9-Sff"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xMn-Ee-Hmk" secondAttribute="trailing" constant="10" id="vPj-mA-Xuu"/>
+                            <constraint firstItem="xMn-Ee-Hmk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="vRk-jX-ijF"/>
+                            <constraint firstItem="KLO-xW-Wmj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vur-7r-L4k"/>
+                            <constraint firstItem="xMn-Ee-Hmk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="xum-bq-1xk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Inicio" id="LPL-Ki-tRE"/>
+                    <connections>
+                        <outlet property="lblRadioNumber" destination="yMi-u4-rFw" id="3vZ-3h-oNr"/>
+                        <outlet property="sliderRadio" destination="t8u-q5-myG" id="cpE-w1-05H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="411" y="5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ag7-WL-WW9">
+            <objects>
+                <navigationController id="15B-oG-3X6" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="JcR-v8-rge"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HKa-CN-Pnz">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="she-rn-RgV">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="73M-Tj-hxQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ll-63-WTR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-627" y="5"/>
+        </scene>
+        <!--Lista-->
+        <scene sceneID="h5e-Cb-6wK">
+            <objects>
+                <viewController id="buJ-Sz-DUG" customClass="ListViewController" customModule="ExamMapAirports" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rfk-eV-yjo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZBg-QY-0Ny">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" systemColor="systemGray3Color"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ylm-Vb-DxK"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <constraints>
+                            <constraint firstItem="Ylm-Vb-DxK" firstAttribute="trailing" secondItem="ZBg-QY-0Ny" secondAttribute="trailing" id="EYL-6x-4ri"/>
+                            <constraint firstItem="ZBg-QY-0Ny" firstAttribute="leading" secondItem="Ylm-Vb-DxK" secondAttribute="leading" id="MR8-o9-k4e"/>
+                            <constraint firstItem="ZBg-QY-0Ny" firstAttribute="top" secondItem="Ylm-Vb-DxK" secondAttribute="top" id="gSD-KR-0IP"/>
+                            <constraint firstItem="Ylm-Vb-DxK" firstAttribute="bottom" secondItem="ZBg-QY-0Ny" secondAttribute="bottom" id="tAf-50-o35"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Lista" image="list.bullet" catalog="system" id="znz-bn-hDj"/>
+                    <connections>
+                        <outlet property="tableViewAirports" destination="ZBg-QY-0Ny" id="Qbf-dX-fxd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="naT-3V-qCy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2880" y="327"/>
+        </scene>
+        <!--Mapa-->
+        <scene sceneID="OnR-KC-DF8">
+            <objects>
+                <viewController id="2Pe-ke-Rna" customClass="MapViewController" customModule="ExamMapAirports" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EmF-An-EG3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cPy-Ce-IE6">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QMs-If-dJe"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <constraints>
+                            <constraint firstItem="cPy-Ce-IE6" firstAttribute="leading" secondItem="QMs-If-dJe" secondAttribute="leading" id="5tF-Bt-VgV"/>
+                            <constraint firstItem="QMs-If-dJe" firstAttribute="trailing" secondItem="cPy-Ce-IE6" secondAttribute="trailing" id="DMp-ua-cxz"/>
+                            <constraint firstItem="QMs-If-dJe" firstAttribute="bottom" secondItem="cPy-Ce-IE6" secondAttribute="bottom" id="Su7-ze-YyB"/>
+                            <constraint firstItem="cPy-Ce-IE6" firstAttribute="top" secondItem="QMs-If-dJe" secondAttribute="top" id="hSe-LM-2Xo"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Mapa" image="mappin" catalog="system" id="tlL-K6-G0e"/>
+                    <connections>
+                        <outlet property="mapView" destination="cPy-Ce-IE6" id="gXz-JK-yK4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gTQ-gf-aUQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2881" y="-348"/>
+        </scene>
+        <!--Aeropuertos-->
+        <scene sceneID="HSv-ZM-BhH">
+            <objects>
+                <tabBarController id="jbE-ol-blT" customClass="TabBarController" customModule="ExamMapAirports" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Aeropuertos" id="P8D-wI-VZc"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2R5-Ew-8ZU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2Pe-ke-Rna" kind="relationship" relationship="viewControllers" id="Cwc-nG-qUG"/>
+                        <segue destination="buJ-Sz-DUG" kind="relationship" relationship="viewControllers" id="fLL-rN-VMn"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y2Y-TO-ehy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1573" y="5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="list.bullet" catalog="system" width="128" height="87"/>
+        <image name="mappin" catalog="system" width="106" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
